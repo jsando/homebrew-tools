@@ -5,21 +5,21 @@
 class Fatimg < Formula
   desc "Go utility for creating and managing FAT32 boot (EFI) partition disk images"
   homepage "https://github.com/jsando/fatimg"
-  version "0.5.2"
+  version "0.5.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jsando/fatimg/releases/download/v0.5.2/fatimg_Darwin_x86_64.tar.gz"
-      sha256 "79830cee627c97109f8984c785bac6de7c88da8461aaceeafbae31458485a2b4"
+      url "https://github.com/jsando/fatimg/releases/download/v0.5.3/fatimg_Darwin_x86_64.tar.gz"
+      sha256 "eb1b8dae12d8cd431dfac43c7de5e566e6aa046d4e9006391a4459a76a466f03"
 
       define_method(:install) do
         bin.install "fatimg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jsando/fatimg/releases/download/v0.5.2/fatimg_Darwin_arm64.tar.gz"
-      sha256 "005207591f78bd59135adc271e14514786a0e1385fb23c9e69afabb646d7ca3f"
+      url "https://github.com/jsando/fatimg/releases/download/v0.5.3/fatimg_Darwin_arm64.tar.gz"
+      sha256 "e41d166a2d130efa0f55a222631ce25ecb9e053ec32a2ff5911aaba53fcf845d"
 
       define_method(:install) do
         bin.install "fatimg"
@@ -29,15 +29,15 @@ class Fatimg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jsando/fatimg/releases/download/v0.5.2/fatimg_Linux_x86_64.tar.gz"
-      sha256 "83db0ca58d24e4ea60e2a325ea6fa74c4643ffb5cb3fa2f91a76c853f3ecadc3"
+      url "https://github.com/jsando/fatimg/releases/download/v0.5.3/fatimg_Linux_x86_64.tar.gz"
+      sha256 "b63f994ba6378e9ab51d185c394dd49473382bcf7162214ae9f16268d6d30e99"
       define_method(:install) do
         bin.install "fatimg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jsando/fatimg/releases/download/v0.5.2/fatimg_Linux_arm64.tar.gz"
-      sha256 "e72b452224fa118307207f07deba062202a9b86f219ae62821f001ba88494bd9"
+      url "https://github.com/jsando/fatimg/releases/download/v0.5.3/fatimg_Linux_arm64.tar.gz"
+      sha256 "f57ffc2d987955d77af8b9c1ebf67fbd6d186f45ea5ee39484fbf6d3646d59dc"
       define_method(:install) do
         bin.install "fatimg"
       end
